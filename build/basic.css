@@ -1,0 +1,443 @@
+/* Selector Groups: How the CSS selectors are organized for better readability.
+ * * [Tag Names]: Where HTML tags are modified: they may contain a class equivalent of the tag name.
+ * * [Device Size Response]: How the element will respond to different device sizes.
+ * * [Column Size Response]: How the element will respond to different column sizes.
+ * *------------------
+ * * CSS Properties: Modifies the visuals of the selector.
+ * * Display: How the selector will render and interace with other HTML elements.
+ * * Size: Calculation properties that dictate the HTML box model size (Examples: width, height. padding. margin. border-width).
+ * * Content: Affects internal inline type content is rendered (Examples: font-family, font-weight, vertical-align).
+ * * Aesthetic: Non essential, strict visual appeal only (Examples: box-shadow, color).
+ * * Classes: [.header, .subheader, .anchor, .selection]
+ *
+ * * Color Theme
+ * *------------------
+ * * Font:			#000000
+ * * Background:		#FFFFFF
+ * * Highlight:		#4553FB
+ *
+ * * ==================================================
+ * * ===================[Basic CSS]====================
+ * * ==================================================
+ *
+ * * Title: Theme Properties.
+ * * Description: Adjust global properties. */
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 1.25em;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+/* Title: Font Properties.
+ * * Description: Controls how the text will scale. Using only (em's) ensures the font size only needs to be entered once. */
+.header, h1, h2, h3, h4, h5, h6 {
+  display: block;
+  font-family: inherit;
+}
+
+h1 {
+  padding: 0 0 0 0;
+  margin: 1em 0em 0.25em 0em;
+  font-size: 3.75em;
+  line-height: 0.95em;
+}
+h1.header {
+  padding: 0 0 0 0;
+  margin: 1em 0em 0.25em 0em;
+  font-size: 3.75em;
+  line-height: 0.95em;
+}
+
+h2 {
+  padding: 0 0 0 0;
+  margin: 1em 0em 0.25em 0em;
+  font-size: 3em;
+  line-height: 0.95em;
+}
+h2.header {
+  padding: 0 0 0 0;
+  margin: 1em 0em 0.25em 0em;
+  font-size: 3em;
+  line-height: 0.95em;
+}
+
+h3 {
+  padding: 0 0 0 0;
+  margin: 1em 0em 0.25em 0em;
+  font-size: 2.5em;
+  line-height: 0.95em;
+}
+h3.header {
+  padding: 0 0 0 0;
+  margin: 1em 0em 0.25em 0em;
+  font-size: 2.5em;
+  line-height: 0.95em;
+}
+
+h4 {
+  padding: 0 0 0 0;
+  margin: 1em 0em 0.25em 0em;
+  font-size: 2em;
+  line-height: 0.95em;
+}
+h4.header {
+  padding: 0 0 0 0;
+  margin: 1em 0em 0.25em 0em;
+  font-size: 2em;
+  line-height: 0.95em;
+}
+
+h5 {
+  padding: 0 0 0 0;
+  margin: 1em 0em 0.25em 0em;
+  font-size: 1.5em;
+  line-height: 0.95em;
+}
+h5.header {
+  padding: 0 0 0 0;
+  margin: 1em 0em 0.25em 0em;
+  font-size: 1.5em;
+  line-height: 0.95em;
+}
+
+h6 {
+  padding: 0 0 0 0;
+  margin: 1em 0em 0.25em 0em;
+  font-size: 1em;
+  line-height: 0.95em;
+}
+h6.header {
+  padding: 0 0 0 0;
+  margin: 1em 0em 0.25em 0em;
+  font-size: 1em;
+  line-height: 0.95em;
+}
+
+.subheader {
+  display: block;
+  padding: 0 0 0 0;
+  margin: 1em 0 1.25em 0;
+  font-size: inherit;
+}
+
+h1 + .subheader, h2 + .subheader, h3 + .subheader, h4 + .subheader, h5 + .subheader, h6 + .subheader {
+  padding: 0 0 0 0;
+  margin: 0.5em 0 2em 0;
+}
+
+hr {
+  display: block;
+  margin: 1.25em 0;
+}
+
+h1 + hr, h2 + hr, h3 + hr, h4 + hr, h5 + hr, h6 + hr {
+  margin: 0.5em 0 1.25em 0;
+}
+
+p {
+  display: block;
+  padding: 0 0 0 0;
+  margin: 1.25em 0;
+}
+
+span {
+  display: inline;
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+del, s {
+  text-decoration: line-through;
+}
+
+ins, u {
+  text-decoration: underline;
+}
+
+cite {
+  font-style: italic;
+}
+
+q {
+  display: inline;
+}
+q::before {
+  content: open-quote;
+}
+q::after {
+  content: close-quote;
+}
+
+/* Title: Anchors.
+ * * Description: Changes the display of anchor tags. */
+a, .anchor {
+  display: inline;
+  cursor: pointer;
+  color: #4553FB;
+}
+
+a:hover, .anchor:hover {
+  color: #4553FB;
+}
+
+/* Title: Blockquote.
+ * * Description: Wrap large quotes around some text. */
+blockquote {
+  display: block;
+  position: relative;
+  padding: 0 0 0 0;
+  margin: 1em 40px;
+}
+
+blockquotes::before {
+  position: absolute;
+  top: -6px;
+  left: -25px;
+  content: open-quote;
+  font-size: 3em;
+}
+blockquotes::after {
+  position: absolute;
+  top: 10px;
+  right: -25px;
+  content: close-quote;
+  font-size: 3em;
+}
+
+/* Title: User selection. 
+ * * Description: Modifies the highlight color of the website.
+ * * Note: .section is intended to be used with inline elements only.
+ * * Note: Compatibility for IE9 and higher. */
+*::selection, *::-moz-selection {
+  color: #FFFFFF;
+  background-color: #4553FB;
+}
+
+.selection {
+  color: #FFFFFF;
+  background-color: #4553FB;
+}
+
+/* Title: Scrollbar Properties
+ * * Description: Changes the look and feel of the scrollbar.
+ * * Note: As of October 16, 2018, this does not work with firefox or edge.
+ * * Note: https://css-tricks.com/custom-scrollbars-in-webkit/
+ * * Note: http://almaer.com/blog/creating-custom-scrollbars-with-css-how-css-isnt-great-for-every-task */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 0 transparent;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-width: 3px;
+  background-color: #4553FB;
+  background-clip: padding-box;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0);
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4553FB;
+}
+
+/* Title: Form Elements 
+ * * Description: Color and display properties for input boxes and textareas. */
+form {
+  display: block;
+}
+
+fieldset {
+  display: block;
+  padding: 1em 2.5%;
+  margin: 0 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000000;
+}
+
+legend {
+  padding: 0 0;
+  margin: 0 0;
+}
+
+label {
+  display: block;
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  display: block;
+  padding: 0 0;
+  margin: 0 0;
+  border: 1px;
+  background-color: transparent;
+  border-style: solid;
+  border-color: inherit;
+}
+
+input[type=radio], input[type=checkbox] {
+  display: inline-block;
+  width: initial;
+}
+
+input[type=submit], input[type=reset] {
+  display: block;
+  padding: 2px 5px;
+  margin: 0 0;
+  border: 0;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+  border-style: solid;
+  border-color: transparent;
+}
+
+button {
+  display: block;
+  padding: 2px 5px;
+  margin: 0 0;
+  border: 0;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+  border-style: solid;
+  border-color: transparent;
+}
+
+input[type=submit]:hover, input[type=reset]:hover {
+  color: inherit;
+  background-color: transparent;
+}
+
+button:hover {
+  color: inherit;
+  background-color: transparent;
+}
+
+ul {
+  display: block;
+  padding: 0 0 0 40px;
+  margin: 1em 0;
+  list-style-type: disc;
+}
+
+li {
+  display: list-item;
+}
+
+ol {
+  display: block;
+  padding: 0 0 0 40px;
+  margin: 1em 0;
+  list-style-type: decimal;
+}
+
+li {
+  display: list-item;
+}
+
+table {
+  display: table;
+  border-width: 1px;
+  text-align: left;
+  border-color: #000000;
+  border-style: solid;
+}
+
+caption {
+  display: table-caption;
+  border-width: inherit;
+  text-align: center;
+  border-color: inherit;
+  border-style: inherit;
+}
+
+thead {
+  display: table-header-group;
+  padding: 0;
+  margin: 0;
+  border-width: inherit;
+  text-align: inherit;
+  vertical-align: middle;
+  border-color: inherit;
+  border-style: inherit;
+}
+
+tbody {
+  display: table-row-group;
+  padding: 0;
+  margin: 0;
+  border-width: inherit;
+  text-align: inherit;
+  vertical-align: middle;
+  border-color: inherit;
+  border-style: inherit;
+}
+
+tfoot {
+  display: table-footer-group;
+  padding: 0;
+  margin: 0;
+  border-width: inherit;
+  text-align: inherit;
+  vertical-align: middle;
+  border-color: inherit;
+  border-style: inherit;
+}
+
+tr {
+  display: table-row;
+  padding: 0;
+  margin: 0;
+  border-width: inherit;
+  border-color: inherit;
+  border-style: inherit;
+}
+
+th {
+  display: table-cell;
+  padding: 0;
+  margin: 0;
+  border-width: inherit;
+  text-align: inherit;
+  font-weight: bold;
+  border-color: inherit;
+  border-style: inherit;
+}
+
+td {
+  display: table-cell;
+  padding: 0;
+  margin: 0;
+  border-width: inherit;
+  text-align: inherit;
+  border-color: inherit;
+  border-style: inherit;
+}
+
+colgroup {
+  display: table-column-group;
+}
+
+col {
+  display: table-column;
+}
+
+/*# sourceMappingURL=/basic.css.map */
