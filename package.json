@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build ./src/index.js",
-    "dev": "parcel ./src/index.js"
+    "build": "parcel build ./src/styles/basic.sass -d build -o basic.min.css && parcel build ./src/styles/basic.sass -d build -o basic.css --no-minify",
+    "dev": "parcel ./src/index.html"
   },
   "repository": {
     "type": "git",
