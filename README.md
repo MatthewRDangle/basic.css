@@ -19,28 +19,5 @@ Basic.css is not for you if:
 * You are using Bootstrap or another framework which already has a foundation built on basic selectors.
 * You don't desire control over basic selectors.
 
-## Prerequisite
-This project requires the following software to  be installed
-- Node JS
-- npm
-
 ## Development
-This project uses [Parcel JS](https://parceljs.org/) to compile the [SCSS](https://sass-lang.com/) to CSS
-
-```
-git clone git@github.com:MatthewRDangle/basic.css.git
-cd basic.css
-npm i
-npm run dev
-```
-
-## Build
-This project uses [Parcel JS](https://parceljs.org/) to compile the [SCSS](https://sass-lang.com/) to CSS
-
-```
-git clone git@github.com:MatthewRDangle/basic.css.git
-cd basic.css
-npm i
-npm run build
-```
-a
+Basic.css is designed to aid the development of websites and webapps through simplicity. To develop for this project requires no prerequsites. Just knowledge of raw CSS.
