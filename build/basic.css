@@ -227,8 +227,14 @@ blockquotes::after {
 * * Description: Modifies the highlight color of the website.
 * * Note: .section is intended to be used with inline elements only.
 * * Note: Compatibility for IE9 and higher. 
+* * Note: Can't combine multiple "::selection" psuedo classes, otherwise it wont work.
 */
-*::selection, *::-moz-selection {
+*::selection {
+  color: #FFFFFF;
+  background-color: #4553FB;	
+}
+
+*::-moz-selection {
   color: #FFFFFF;
   background-color: #4553FB;
 }
