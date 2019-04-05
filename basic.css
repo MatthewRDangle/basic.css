@@ -1,27 +1,33 @@
-/* Selector Groups: How the CSS selectors are organized for better readability.
- * * [Tag Names]: Where HTML tags are modified: they may contain a class equivalent of the tag name.
- * * [Device Size Response]: How the element will respond to different device sizes.
- * * [Column Size Response]: How the element will respond to different column sizes.
- * *------------------
- * * CSS Properties: Modifies the visuals of the selector.
- * * Display: How the selector will render and interace with other HTML elements.
- * * Size: Calculation properties that dictate the HTML box model size (Examples: width, height. padding. margin. border-width).
- * * Content: Affects internal inline type content is rendered (Examples: font-family, font-weight, vertical-align).
- * * Aesthetic: Non essential, strict visual appeal only (Examples: box-shadow, color).
- * * Classes: [.header, .subheader, .anchor, .selection]
- *
- * * Color Theme
- * *------------------
- * * Font:			#000000
- * * Background:		#FFFFFF
- * * Highlight:		#4553FB
- *
- * * ==================================================
- * * ===================[Basic CSS]====================
- * * ==================================================
- *
- * * Title: Theme Properties.
- * * Description: Adjust global properties. */
+/* 
+* * Selector Groups: How the CSS selectors are organized for better readability.
+* * [Tag Names]: Where HTML tags are modified: they may contain a class equivalent of the tag name.
+* * [Device Size Response]: How the element will respond to different device sizes.
+* * [Column Size Response]: How the element will respond to different column sizes.
+*
+* * CSS Properties: Modifies the visuals of the selector.
+* * Display: How the selector will render and interace with other HTML elements.
+* * Size: Calculation properties that dictate the HTML box model size (Examples: width, height. padding. margin. border-width).
+* * Content: Affects internal inline type content is rendered (Examples: font-family, font-weight, vertical-align).
+* * Aesthetic: Non essential, strict visual appeal only (Examples: box-shadow, color).
+* * Classes: [.header, .subheader, .anchor, .selection]
+*
+* * Color Theme
+* *------------------
+* * Font:			#000000
+* * Background:		#FFFFFF
+* * Highlight:		#4553FB
+*/
+
+/*
+* * ==================================================
+* * ===================[Basic CSS]====================
+* * ==================================================
+*/
+ 
+/*
+* * Title: Theme Properties.
+* * Description: Adjust global properties. 
+*/
 body {
   font-family: sans-serif;
   font-size: 14px;
@@ -30,8 +36,10 @@ body {
   background-color: #FFFFFF;
 }
 
-/* Title: Font Properties.
- * * Description: Controls how the text will scale. Using only (em's) ensures the font size only needs to be entered once. */
+/* 
+* * Title: Font Properties.
+* * Description: Controls how the text will scale. Using only (em's) ensures the font size only needs to be entered once. 
+*/
 .header, h1, h2, h3, h4, h5, h6 {
   display: block;
   font-family: inherit;
@@ -176,8 +184,10 @@ q::after {
   content: close-quote;
 }
 
-/* Title: Anchors.
- * * Description: Changes the display of anchor tags. */
+/*
+* * Title: Anchors.
+* * Description: Changes the display of anchor tags. 
+*/
 a, .anchor {
   display: inline;
   cursor: pointer;
@@ -212,10 +222,12 @@ blockquotes::after {
   font-size: 3em;
 }
 
-/* Title: User selection. 
- * * Description: Modifies the highlight color of the website.
- * * Note: .section is intended to be used with inline elements only.
- * * Note: Compatibility for IE9 and higher. */
+/* 
+* * Title: User selection. 
+* * Description: Modifies the highlight color of the website.
+* * Note: .section is intended to be used with inline elements only.
+* * Note: Compatibility for IE9 and higher. 
+*/
 *::selection, *::-moz-selection {
   color: #FFFFFF;
   background-color: #4553FB;
@@ -226,11 +238,13 @@ blockquotes::after {
   background-color: #4553FB;
 }
 
-/* Title: Scrollbar Properties
- * * Description: Changes the look and feel of the scrollbar.
- * * Note: As of October 16, 2018, this does not work with firefox or edge.
- * * Note: https://css-tricks.com/custom-scrollbars-in-webkit/
- * * Note: http://almaer.com/blog/creating-custom-scrollbars-with-css-how-css-isnt-great-for-every-task */
+/* 
+* * Title: Scrollbar Properties
+* * Description: Changes the look and feel of the scrollbar.
+* * Note: As of October 16, 2018, this does not work with firefox or edge.
+* * Note: https://css-tricks.com/custom-scrollbars-in-webkit/
+* * Note: http://almaer.com/blog/creating-custom-scrollbars-with-css-how-css-isnt-great-for-every-task 
+*/
 ::-webkit-scrollbar {
   width: 15px;
   height: 15px;
@@ -254,8 +268,10 @@ blockquotes::after {
   background-color: #4553FB;
 }
 
-/* Title: Form Elements 
- * * Description: Color and display properties for input boxes and textareas. */
+/* 
+* * Title: Form Elements 
+* * Description: Color and display properties for input boxes and textareas. 
+*/
 form {
   display: block;
 }
@@ -331,6 +347,10 @@ button:hover {
   background-color: transparent;
 }
 
+/* 
+* * Title: Unordered List. 
+* * Description: A bullet next to text reflecting a visual hierarchy of information.
+*/
 ul {
   display: block;
   padding: 0 0 0 40px;
@@ -342,6 +362,10 @@ li {
   display: list-item;
 }
 
+/* 
+* * Title: Ordered List. 
+* * Description: A number next to text reflecting a visual hierarchy of information.
+*/
 ol {
   display: block;
   padding: 0 0 0 40px;
@@ -353,6 +377,10 @@ li {
   display: list-item;
 }
 
+/* 
+* * Title: A Table. 
+* * Description: Information represented through a visual chart of rows and columns.
+*/
 table {
   display: table;
   border-width: 1px;
@@ -439,5 +467,3 @@ colgroup {
 col {
   display: table-column;
 }
-
-/*# sourceMappingURL=/basic.css.map */
