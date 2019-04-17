@@ -304,6 +304,11 @@ label {
   font-weight: bold;
 }
 
+input, select {
+  height: 1.2em; /* Normalizes height between input and select. */
+  line-height: 1.2em; /* Normalizes height between input and select. */
+}
+
 input, select, textarea {
   display: block;
   padding: 0 0;
