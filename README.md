@@ -2,7 +2,15 @@
 Reduce the amount of unique CSS properties by establishing a cross-browser compatible CSS system for commonly used properties.
 
 ## How does it work?
-Basic.css groups together commonly used HTML tags (e.g. body, h1, h5, span, button, input, ::selection, ect.) to create fundemental controls for CSS systems such as Themes, Responsive Fonts, Standardize Forms, and more. These controls establish a bedrock layer to build from and removes the reliance of user agent stylesheets. The initial install of basic.css acts similar to Normalize.css or Reset CSS, except basic.css is designed to be customized.
+Basic.css groups together commonly used HTML tags (e.g. body, h1, h5, span, button, input, ::selection, ect.) to create fundemental controls for CSS systems such as Themes, Font Hierarchies, Forms Element Controls, and more. These controls establish a bedrock layer to build from and removes the reliance of user agent stylesheets. The initial install of basic.css acts similar to Normalize.css or Reset CSS, except basic.css is designed to be customized.
+
+* Establishes common user agent defaults to build from.
+* Creates a foundation of generic HTML selectors for clearity.
+* Provides common methods for commonly used CSS systems (Text Hierarchies, Themes, Form Controls, ect).
+* Corrects bugs and common browser inconsistencies.
+* Fixes inconsistant heights of form elements (such as input and select).
+* Standardizes styles for a wide range of generic HTML elements.
+* Is customizable for your needs.
 
 ## Is Basic.css for you?
 Basic.css establishes a foundation for your stylesheet by removing it's dependency on user agent stylesheets. This is similar to Normalize.css and Reset CSS, except they are not designed to be changed. Basic.css is and it's a boilerplate designed to standardize the CSS across all browsers and act as a bedrock for frameworks.
