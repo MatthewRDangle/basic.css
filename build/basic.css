@@ -238,30 +238,6 @@ sub, sup {
 }
 
 /*
-* * Title: Tag Normalize
-* * Description: Sets the input on modern HTMl elements. (Generally for IE <= 10).
-*/
-main, nav, aside, section, details, summary {
-  display: block; /* Required for display in IE */
-}
-summary {
-  display: list-item;
-}
-template, [type="hidden"] {
-  display: none;
-}
-
-
-/*
-* * Title: Preformatted Text Elements
-* * Description: Ensures preformatted text blocks looks the same across browsers.
-*/
-pre, code, kbd, samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-/*
 * * Title: Anchors.
 * * Description: Changes the display of anchor tags. 
 */
@@ -303,7 +279,7 @@ blockquote::after {
 }
 
 /*
-* * Title: Inline Quotes.
+* * Title: Inline Quote.
 * * Description: Wraps quotations around inline-text.
 */
 q {
@@ -613,4 +589,22 @@ colgroup {
 
 col {
   display: table-column;
+}
+
+/*
+* * Title: Tag Normalize
+* * Description: Sets the input on modern HTMl elements. (Generally for IE <= 10).
+*/
+main, nav, aside, section, details, summary {
+  display: block; /* Required for display in IE */
+}
+summary {
+  display: list-item;
+}
+template, [type="hidden"] {
+  display: none;
+}
+pre, code, kbd, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
 }
