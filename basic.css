@@ -38,7 +38,7 @@ html, body {
   margin: 0; /* Aligns HTML and Body right up against the browser window. */
   font-family: sans-serif;
   font-size: 14px;
-  line-height: 1.25;
+  line-height: 1.25; /* Keep this number unitless to avoid overlap and inheritence issues. */
   overflowX: hidden; /* Hides any content outside the browser window. */
   -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. */ 
   color: #000000;
@@ -272,7 +272,7 @@ blockquote::before {
 }
 blockquote::after {
   position: absolute;
-  top: 10px;
+  bottom: -6px;
   right: -25px;
   content: close-quote;
   font-size: 3em;
