@@ -40,18 +40,12 @@ body {
 * * Title: Font Properties.
 * * Description: Controls how the text will scale. Using only (em's) ensures the font size only needs to be entered once. 
 */
-.header, h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   display: block;
   font-family: inherit;
 }
 
 h1 {
-  padding: 0 0 0 0;
-  margin: 1em 0em 0.25em 0em;
-  font-size: 3.75em;
-  line-height: 0.95em;
-}
-h1.header {
   padding: 0 0 0 0;
   margin: 1em 0em 0.25em 0em;
   font-size: 3.75em;
@@ -64,20 +58,8 @@ h2 {
   font-size: 3em;
   line-height: 0.95em;
 }
-h2.header {
-  padding: 0 0 0 0;
-  margin: 1em 0em 0.25em 0em;
-  font-size: 3em;
-  line-height: 0.95em;
-}
 
 h3 {
-  padding: 0 0 0 0;
-  margin: 1em 0em 0.25em 0em;
-  font-size: 2.5em;
-  line-height: 0.95em;
-}
-h3.header {
   padding: 0 0 0 0;
   margin: 1em 0em 0.25em 0em;
   font-size: 2.5em;
@@ -90,12 +72,6 @@ h4 {
   font-size: 2em;
   line-height: 0.95em;
 }
-h4.header {
-  padding: 0 0 0 0;
-  margin: 1em 0em 0.25em 0em;
-  font-size: 2em;
-  line-height: 0.95em;
-}
 
 h5 {
   padding: 0 0 0 0;
@@ -103,20 +79,8 @@ h5 {
   font-size: 1.5em;
   line-height: 0.95em;
 }
-h5.header {
-  padding: 0 0 0 0;
-  margin: 1em 0em 0.25em 0em;
-  font-size: 1.5em;
-  line-height: 0.95em;
-}
 
 h6 {
-  padding: 0 0 0 0;
-  margin: 1em 0em 0.25em 0em;
-  font-size: 1em;
-  line-height: 0.95em;
-}
-h6.header {
   padding: 0 0 0 0;
   margin: 1em 0em 0.25em 0em;
   font-size: 1em;
