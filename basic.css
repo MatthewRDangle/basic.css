@@ -96,8 +96,6 @@ html, body {
 	.wrapper {
 		padding-left: 12%;
 		padding-right: 12%;
-		margin: 0 auto; /* Centers the website in the view spacing. */
-		max-width: auto;
 	}
 }
 
