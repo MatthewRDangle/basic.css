@@ -56,8 +56,6 @@ html, body {
 	.wrapper {
 		padding-left: 5%;
 		padding-right: 5%;
-		margin: 0 auto; /* Centers the website in the view spacing. */
-		max-width: auto;
 	}
 }
 
@@ -66,8 +64,6 @@ html, body {
 	.wrapper {
 		padding-left: 6%;
 		padding-right: 6%;
-		margin: 0 auto; /* Centers the website in the view spacing. */
-		max-width: auto;
 	}
 }
 
@@ -76,8 +72,6 @@ html, body {
 	.wrapper {
 		padding-left: 8%;
 		padding-right: 8%;
-		margin: 0 auto; /* Centers the website in the view spacing. */
-		max-width: auto;
 	}
 }
 
@@ -86,8 +80,6 @@ html, body {
 	.wrapper {
 		padding-left: 9%;
 		padding-right: 9%;
-		margin: 0 auto; /* Centers the website in the view spacing. */
-		max-width: auto;
 	}
 }
 
@@ -96,8 +88,6 @@ html, body {
 	.wrapper {
 		padding-left: 10%;
 		padding-right: 10%;
-		margin: 0 auto; /* Centers the website in the view spacing. */
-		max-width: auto;
 	}
 }
 
