@@ -18,7 +18,7 @@ Basic.css establishes a foundation for your stylesheet by removing it's dependen
 Basic.css is for you if:
 * Your framework or stylesheet has no foundation on basic selectors (div, button, input, ::selection).
 * You desire control over basic selectors
-* Your starting a CSS framework from scratch.
+* Your starting a CSS framework or theme from scratch.
 
 Basic.css is not for you if:
 * You are using Bootstrap or another framework which already has a foundation built on basic selectors.
