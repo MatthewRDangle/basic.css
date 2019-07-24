@@ -9,7 +9,7 @@
 * * Size: Calculation properties that dictate the HTML box model size (Examples: width, height. padding. margin. border-width).
 * * Content: Affects internal inline type content is rendered (Examples: font-family, font-weight, vertical-align).
 * * Aesthetic: Non essential, strict visual appeal only (Examples: box-shadow, color).
-* * Classes: [.header, .subheader, .anchor, .selection]
+* * Classes: [.wrapper .header, .subheader, .anchor, .selection]
 *
 * * Color Theme
 * *------------------
@@ -28,12 +28,87 @@
 * * Title: Theme Properties.
 * * Description: Adjust global properties. 
 */
-body {
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  margin: 0; /* Aligns HTML and Body right up against the browser window. */
   font-family: sans-serif;
   font-size: 14px;
-  line-height: 1.25em;
+  line-height: 1.25;
+  overflowX: hidden; /* Hides any content outside the browser window. */
+  -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. */ 
   color: #000000;
   background-color: #FFFFFF;
+}
+
+/*
+** Title: Wrapper.
+** Type: [Global]
+** Description: Controls whether an HTML element receives website margins or extends to the full width of the page (technically, wrapper container).
+*/
+
+/* [Device Size Response] : Extra Small Devices - Small Cell Phones. */
+@media only screen and (max-width: 480px) {
+	.wrapper {
+		padding-left: 5%;
+		padding-right: 5%;
+		margin: 0 auto; /* Centers the website in the view spacing. */
+		max-width: auto;
+	}
+}
+
+/* [Device Size Response] : Small Devices - Large Cell Phones and Extra Small Tablets.*/
+@media only screen and (min-width: 480px) {
+	.wrapper {
+		padding-left: 6%;
+		padding-right: 6%;
+		margin: 0 auto; /* Centers the website in the view spacing. */
+		max-width: auto;
+	}
+}
+
+/* [Device Size Response] : Medium Devices - Small Tablets.*/
+@media only screen and (min-width: 760px) {
+	.wrapper {
+		padding-left: 8%;
+		padding-right: 8%;
+		margin: 0 auto; /* Centers the website in the view spacing. */
+		max-width: auto;
+	}
+}
+
+/* [Device Size Response] : Medium Devices - Large Tablets Small Laptops.*/
+@media only screen and (min-width: 920px) {
+	.wrapper {
+		padding-left: 9%;
+		padding-right: 9%;
+		margin: 0 auto; /* Centers the website in the view spacing. */
+		max-width: auto;
+	}
+}
+
+/* [Device Size Response] : Medium Devices - Large Laptops and Small Desktops.*/
+@media only screen and (min-width: 1100px) {
+	.wrapper {
+		padding-left: 10%;
+		padding-right: 10%;
+		margin: 0 auto; /* Centers the website in the view spacing. */
+		max-width: auto;
+	}
+}
+
+/* [Device Size Response] : Medium Devices - Large Desktops.*/
+@media only screen and (min-width: 1400px) {
+	.wrapper {
+		padding-left: 12%;
+		padding-right: 12%;
+		margin: 0 auto; /* Centers the website in the view spacing. */
+		max-width: auto;
+	}
 }
 
 /* 
@@ -48,21 +123,21 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   padding: 0 0 0 0;
   margin: 1em 0em 0.25em 0em;
-  font-size: 3.75em;
+  font-size: 3em;
   line-height: 0.95em;
 }
 
 h2 {
   padding: 0 0 0 0;
   margin: 1em 0em 0.25em 0em;
-  font-size: 3em;
+  font-size: 2.5em;
   line-height: 0.95em;
 }
 
 h3 {
   padding: 0 0 0 0;
   margin: 1em 0em 0.25em 0em;
-  font-size: 2.5em;
+  font-size: 2em;
   line-height: 0.95em;
 }
 
@@ -101,7 +176,13 @@ h1 + .subheader, h2 + .subheader, h3 + .subheader, h4 + .subheader, h5 + .subhea
 
 hr {
   display: block;
+  height: 1px;
+  padding: 0;
   margin: 1.25em 0;
+  border-width: 0;
+  border-top-width: 1px; /* Change this value for horizontal line thickness. */
+  border-style: solid;
+  border-color: #000000; /* Works for modern browsers. */
 }
 
 h1 + hr, h2 + hr, h3 + hr, h4 + hr, h5 + hr, h6 + hr {
@@ -123,7 +204,7 @@ em, i {
 }
 
 strong, b {
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 del, s {
@@ -138,6 +219,93 @@ cite {
   font-style: italic;
 }
 
+small {
+  font-size: 80%;
+}
+
+sup {
+  vertical-align: super;
+}
+sub {
+  vertical-align: sub;
+}
+sub, sup {
+  display: inline;
+  font-size: 80%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/*
+* * Title: Tag Normalize
+* * Description: Sets the input on modern HTMl elements. (Generally for IE <= 10).
+*/
+main, nav, aside, section, details, summary {
+  display: block; /* Required for display in IE */
+}
+summary {
+  display: list-item;
+}
+template, [type="hidden"] {
+  display: none;
+}
+
+
+/*
+* * Title: Preformatted Text Elements
+* * Description: Ensures preformatted text blocks looks the same across browsers.
+*/
+pre, code, kbd, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/*
+* * Title: Anchors.
+* * Description: Changes the display of anchor tags. 
+*/
+a, .anchor {
+  display: inline;
+  cursor: pointer;
+  color: #4553FB;
+  background-color: transparent; /* Remove the gray background on active links in IE 10. */
+}
+
+a:hover, .anchor:hover {
+  color: #4553FB;
+}
+
+/* 
+ * * Title: Blockquote.
+ * * Description: Wrap large quotes around some text. 
+ */
+blockquote {
+  display: block;
+  position: relative;
+  padding: 0 0 0 0;
+  margin: 1em 40px;
+}
+
+blockquote::before {
+  position: absolute;
+  top: -6px;
+  left: -25px;
+  content: open-quote;
+  font-size: 3em;
+}
+blockquote::after {
+  position: absolute;
+  top: 10px;
+  right: -25px;
+  content: close-quote;
+  font-size: 3em;
+}
+
+/*
+* * Title: Inline Quotes.
+* * Description: Wraps quotations around inline-text.
+*/
 q {
   display: inline;
 }
@@ -149,41 +317,11 @@ q::after {
 }
 
 /*
-* * Title: Anchors.
-* * Description: Changes the display of anchor tags. 
+* * Title: Image.
+* * Description: Changes display of an generic image.
 */
-a, .anchor {
-  display: inline;
-  cursor: pointer;
-  color: #4553FB;
-}
-
-a:hover, .anchor:hover {
-  color: #4553FB;
-}
-
-/* Title: Blockquote.
- * * Description: Wrap large quotes around some text. */
-blockquote {
-  display: block;
-  position: relative;
-  padding: 0 0 0 0;
-  margin: 1em 40px;
-}
-
-blockquotes::before {
-  position: absolute;
-  top: -6px;
-  left: -25px;
-  content: open-quote;
-  font-size: 3em;
-}
-blockquotes::after {
-  position: absolute;
-  top: 10px;
-  right: -25px;
-  content: close-quote;
-  font-size: 3em;
+img {
+	border-style: none; /* Removes forced border from IE 10. */
 }
 
 /* 
@@ -256,8 +394,12 @@ fieldset {
 }
 
 legend {
-  padding: 0 0;
-  margin: 0 0;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  white-space: normal;
+  color: inherit;
 }
 
 label {
@@ -268,56 +410,84 @@ label {
   font-weight: bold;
 }
 
-input, select {
-  height: 1.2em; /* Normalizes height between input and select. */
-  line-height: 1.2em; /* Normalizes height between input and select. */
-}
-
 input, select, textarea {
   display: block;
-  padding: 0 0;
-  margin: 0 0;
+  padding: 0; /* Generally best not to touch this. If you want padding, remove the borders and apply it to a div. Then give the div padding. */
+  margin: 0;
   border: 1px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
   background-color: transparent;
   border-style: solid;
   border-color: inherit;
 }
 
-input[type=radio], input[type=checkbox] {
+textarea {
+  overflow: auto; /* Removes the forced scroll bar for some browsers. */
+}
+
+input[type="radio"], input[type="checkbox"] {
+  box-sizing: border-box; /* Normalizes look for IE 10. */
   display: inline-block;
   width: initial;
+  padding: 0;
+  cursor: pointer;
 }
 
-input[type=submit], input[type=reset] {
+input[type="color"], input[type="date"] {
+	cursor: pointer;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* Correct the odd appearance in Chrome and Safari. */
+  outline-offset: -2px; /* Correct the outline style in Safari. */
+}
+
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; /* Remove the inner padding in Chrome and Safari on macOS. */
+}
+
+input:focus {
+	outline-color: #4553FB;
+}
+
+select[multiple] {
+  height: auto;
+}
+
+optgroup {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;	
+}
+
+button, [type="submit"], [type="reset"], [type="button"] {
   display: block;
+  width: auto;
   padding: 2px 5px;
-  margin: 0 0;
-  border: 0;
+  border-width: 1px;
+  margin: 0;
+  border-width: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  overflow: visible;
   cursor: pointer;
-  color: inherit;
-  background-color: transparent;
+  color: #FFFFFF;
+  background-color: #4553FB;
   border-style: solid;
   border-color: transparent;
+  -webkit-appearance: button; /* Correct the inability to style clickable types in iOS and Safari. */
 }
 
-button {
-  display: block;
-  padding: 2px 5px;
-  margin: 0 0;
-  border: 0;
-  cursor: pointer;
-  color: inherit;
-  background-color: transparent;
-  border-style: solid;
-  border-color: transparent;
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* Correct the inability to style clickable types in iOS and Safari. */
+  font: inherit; /* Change font properties to `inherit` in Safari. */
 }
 
-input[type=submit]:hover, input[type=reset]:hover {
-  color: inherit;
-  background-color: transparent;
-}
-
-button:hover {
+button:hover, [type="submit"]:hover, [type="reset"]:hover, [type="button"]:hover {
   color: inherit;
   background-color: transparent;
 }
@@ -366,15 +536,17 @@ table {
 
 caption {
   display: table-caption;
+  padding: 5px;
   border-width: inherit;
   text-align: center;
+  font-weight: bold;
   border-color: inherit;
   border-style: inherit;
 }
 
 thead {
   display: table-header-group;
-  padding: 0;
+  padding: 5px;
   margin: 0;
   border-width: inherit;
   text-align: inherit;
@@ -385,7 +557,7 @@ thead {
 
 tbody {
   display: table-row-group;
-  padding: 0;
+  padding: 5px;
   margin: 0;
   border-width: inherit;
   text-align: inherit;
@@ -396,7 +568,7 @@ tbody {
 
 tfoot {
   display: table-footer-group;
-  padding: 0;
+  padding: 5px;
   margin: 0;
   border-width: inherit;
   text-align: inherit;
@@ -407,7 +579,7 @@ tfoot {
 
 tr {
   display: table-row;
-  padding: 0;
+  padding: 5px;
   margin: 0;
   border-width: inherit;
   border-color: inherit;
@@ -416,7 +588,7 @@ tr {
 
 th {
   display: table-cell;
-  padding: 0;
+  padding: 5px;
   margin: 0;
   border-width: inherit;
   text-align: inherit;
@@ -427,7 +599,7 @@ th {
 
 td {
   display: table-cell;
-  padding: 0;
+  padding: 5px;
   margin: 0;
   border-width: inherit;
   text-align: inherit;
