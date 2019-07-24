@@ -18,7 +18,7 @@ Basic.css establishes a foundation for your stylesheet by removing it's dependen
 Basic.css is for you if:
 * Your framework or stylesheet has no foundation on basic selectors (div, button, input, ::selection).
 * You desire control over basic selectors
-* Your starting a CSS framework from scratch.
+* Your starting a CSS framework or theme from scratch.
 
 Basic.css is not for you if:
 * You are using Bootstrap or another framework which already has a foundation built on basic selectors.
@@ -28,14 +28,20 @@ Basic.css is not for you if:
 | Property Group | IE | Edge | Chrome | Firefox | Safari |
 |:-------------- |:--:|:----:|:------:|:-------:|:------:|
 | Theme          |X   |X     |X       |X        |X       |
+| Wrapper        |X   |X     |X       |X        |X       |
 | Font Sizing    |X   |X     |X       |X        |X       |
 | Anchors        |X   |X     |X       |X        |X       |
 | Blockquote     |X   |X     |X       |X        |X       |
+| Inline Quote   |X   |X     |X       |X        |X       |
+| Image          |X   |X     |X       |X        |X       |
 | User Selection |X   |X     |X       |X        |X       |
 | Scrollbar      |    |      |X       |         |X       |
 | Lists          |X   |X     |X       |X        |X       |
 | Form Element   |X   |X     |X       |X        |X       |
+| Unordered List |X   |X     |X       |X        |X       |
+| Ordered List   |X   |X     |X       |X        |X       |
 | Table Control  |X   |X     |X       |X        |X       |
+| Normalize      |X   |X     |X       |X        |X       |
 
 ## Development
 Basic.css is designed to aid the development of websites and webapps through simplicity. To develop for this project requires no prerequsites. Just knowledge of raw CSS.
