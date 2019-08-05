@@ -1,4 +1,4 @@
-# Basic.css
+# Basic.css [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 Reduce the amount of unique CSS properties by establishing a cross-browser compatible CSS system for commonly used properties.
 
 ## How does it work?
