@@ -1,21 +1,21 @@
 /* 
+* Stylesheet Semantics.
+------------------
+* * CSS Blocks: Every chunk of CSS is separated into modular blocks. Each with a Name, Type and Description, with occasional notes.
+* * * Title: A name for what is being stylized (ie. input, button, scrollbar, ect.)
+* * * Description: An explanation of what is being stylized.
+* * * Note: Thoughts or information other developers might find worthy of a read.
+------------------
 * * Selector Groups: How the CSS selectors are organized for better readability.
-* * [Tag Names]: Where HTML tags are modified: they may contain a class equivalent of the tag name.
-* * [Device Size Response]: How the element will respond to different device sizes.
-* * [Column Size Response]: How the element will respond to different column sizes.
-*
-* * CSS Properties: Modifies the visuals of the selector.
-* * Display: How the selector will render and interace with other HTML elements.
-* * Size: Calculation properties that dictate the HTML box model size (Examples: width, height. padding. margin. border-width).
-* * Content: Affects internal inline type content is rendered (Examples: font-family, font-weight, vertical-align).
-* * Aesthetic: Non essential, strict visual appeal only (Examples: box-shadow, color).
-* * Classes: [.wrapper .header, .subheader, .anchor, .selection]
+* * * [Device Size Response]: How the element will respond to different device sizes.
+------------------
+* * Unique Classes: [.wrapper .header, .subheader, .anchor, .selection]
 *
 * * Color Theme
 * *------------------
 * * Font:			#000000
-* * Background:		#FFFFFF
-* * Highlight:		#4553FB
+* * Background:			#FFFFFF
+* * Highlight:			#4553FB
 */
 
 /*
@@ -400,7 +400,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 input[type="color"], input[type="date"] {
-	cursor: pointer;
+ cursor: pointer;
 }
 
 input[type="search"] {
@@ -413,7 +413,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 input:focus {
-	outline-color: #4553FB;
+  outline-color: #4553FB;
 }
 
 select[multiple] {
