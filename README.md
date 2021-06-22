@@ -37,7 +37,7 @@ BasicCSS is not for you if:
 | User Selection |X   |X     |X       |X        |X       |
 | Scrollbar      |    |      |X       |         |X       |
 | Lists          |X   |X     |X       |X        |X       |
-| Form Element   |X   |X     |X       |X        |X       |
+| Form Elements  |X   |X     |X       |X        |X       |
 | Unordered List |X   |X     |X       |X        |X       |
 | Ordered List   |X   |X     |X       |X        |X       |
 | Table Control  |X   |X     |X       |X        |X       |
