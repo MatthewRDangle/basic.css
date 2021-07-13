@@ -236,7 +236,8 @@ a, .anchor {
   background-color: transparent; /* Remove the gray background on active links in IE 10. */
 }
 
-a:hover, .anchor:hover {
+a:hover, .anchor:hover,
+a:focus, .anchor:focus {
   color: #4553FB;
 }
 
